@@ -1,0 +1,6 @@
+{
+  "name": "STAY YEON PARTY",
+  "description": "스테이연 펜션 1박 2일 프라이빗 파티 모바일 웹앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
