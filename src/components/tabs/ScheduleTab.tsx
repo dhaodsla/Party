@@ -28,31 +28,31 @@ export function ScheduleTab() {
   return (
     <div className="p-6 max-w-md mx-auto space-y-8 animate-in fade-in pb-12">
       <div className="space-y-2">
-        <h2 className="text-2xl font-bold text-[#2c4033] tracking-tight">파티 타임테이블</h2>
-        <p className="text-[#847f76] text-sm">시간은 상황에 따라 유연하게 변경될 수 있습니다.</p>
+        <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">파티 타임테이블</h2>
+        <p className="text-gray-400 text-sm">시간은 상황에 따라 유연하게 변경될 수 있습니다.</p>
       </div>
 
       <div className="space-y-10">
         {scheduleData.map((dayPlan, idx) => (
           <div key={idx} className="space-y-6">
-            <h3 className="font-bold text-[#5d564d] border-b border-[#f2f0ea] pb-2 px-1 sticky top-[72px] bg-[#fdfbf7]/90 backdrop-blur z-10">
+            <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] border-b border-white/10 pb-2 px-1 sticky top-[72px] bg-[#0a0a0a]/90 backdrop-blur z-10">
               {dayPlan.day}
             </h3>
             
-            <div className="relative border-l-2 border-[#f2f0ea] ml-3 space-y-8">
+            <div className="relative border-l-2 border-white/10 ml-3 space-y-8">
               {dayPlan.events.map((evt, eIdx) => (
                 <div key={eIdx} className="relative pl-6">
                   {/* Timeline Dot */}
-                  <div className={`absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-4 border-[#fdfbf7] ${evt.highlight ? 'bg-[#2c4033]' : 'bg-[#d5d0c5]'}`}></div>
+                  <div className={`absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-4 border-[#0a0a0a] ${evt.highlight ? 'bg-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.8)]' : 'bg-gray-600'}`}></div>
                   
-                  <div className={`bg-white rounded-xl p-4 shadow-[0_2px_10px_rgba(0,0,0,0.02)] border ${evt.highlight ? 'border-[#2c4033]/20 shadow-[0_4px_15px_rgba(44,64,51,0.05)]' : 'border-[#f2f0ea]'} interactive-card group`}>
+                  <div className={`rounded-xl p-4 shadow-[0_4px_20px_rgba(0,0,0,0.3)] border backdrop-blur-sm interactive-card group ${evt.highlight ? 'bg-[#00ffff]/5 border-[#00ffff]/30 shadow-[0_0_15px_rgba(0,255,255,0.15)]' : 'bg-white/5 border-white/10'}`}>
                     <div className="flex items-baseline gap-3 mb-1">
-                      <span className={`font-mono font-bold text-lg transition-colors ${evt.highlight ? 'text-[#2c4033]' : 'text-[#3e3a35] group-hover:text-[#2c4033]'}`}>
+                      <span className={`font-mono font-bold text-lg transition-colors ${evt.highlight ? 'text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]' : 'text-gray-300 group-hover:text-[#00ffff]'}`}>
                         {evt.time}
                       </span>
-                      <h4 className="font-bold text-[#3e3a35] group-hover:text-black transition-colors">{evt.title}</h4>
+                      <h4 className="font-bold text-[#eeeeee] group-hover:text-white transition-colors">{evt.title}</h4>
                     </div>
-                    <p className="text-[#847f76] text-sm whitespace-pre-wrap leading-relaxed mt-2">
+                    <p className="text-gray-400 text-sm whitespace-pre-wrap leading-relaxed mt-2">
                       {evt.desc}
                     </p>
                   </div>

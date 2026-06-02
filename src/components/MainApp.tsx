@@ -32,10 +32,10 @@ export function MainApp() {
   ] as const;
 
   return (
-    <div className="flex flex-col h-[100dvh] bg-[#fdfbf7] text-[#3e3a35] font-sans overflow-hidden">
+    <div className="flex flex-col h-[100dvh] bg-[#0a0a0a] text-[#eeeeee] font-sans overflow-hidden">
       {/* Header */}
-      <header className="px-6 py-4 flex items-center justify-center border-b border-[#ece8de] bg-white/80 backdrop-blur-md z-10 sticky top-0 shrink-0">
-        <h1 className="font-semibold tracking-widest uppercase text-sm text-[#5d564d]">Stay Yeon Party</h1>
+      <header className="px-6 py-4 flex items-center justify-center border-b border-white/10 bg-[#0a0a0a]/80 backdrop-blur-md z-10 sticky top-0 shrink-0">
+        <h1 className="font-semibold tracking-widest uppercase text-sm text-gray-400">Stay Yeon Party</h1>
       </header>
 
       {/* Main Content Area */}
@@ -55,7 +55,7 @@ export function MainApp() {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#ece8de] pb-safe z-50">
+      <nav className="fixed bottom-0 left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-white/10 pb-safe z-50">
         <div className="flex justify-around items-center h-16 max-w-md mx-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -65,7 +65,7 @@ export function MainApp() {
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
                 className={`flex flex-col items-center justify-center w-full h-full space-y-1 transition-colors ${
-                  isActive ? 'text-[#2c4033]' : 'text-[#a39f98]'
+                  isActive ? 'text-[#00ffff] drop-shadow-[0_0_8px_rgba(0,255,255,0.6)]' : 'text-gray-500 hover:text-gray-300'
                 }`}
               >
                 <Icon size={20} strokeWidth={isActive ? 2.5 : 2} />

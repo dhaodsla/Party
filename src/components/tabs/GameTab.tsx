@@ -52,25 +52,25 @@ export function GameTab() {
   return (
     <div className="p-6 max-w-md mx-auto space-y-8 animate-in fade-in pb-12">
       <div className="space-y-2">
-        <h2 className="text-2xl font-bold text-[#2c4033] tracking-tight">파티 게임</h2>
-        <p className="text-[#847f76] text-sm leading-relaxed">
+        <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">파티 게임</h2>
+        <p className="text-gray-400 text-sm leading-relaxed">
           어색함을 풀고 더 즐거운 시간을 만들어줄 게임들
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-3">
         {games.map((g, idx) => (
-          <div key={idx} className="bg-white p-4 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-[#f2f0ea] interactive-card group">
-            <h4 className="font-bold text-[#3e3a35] group-hover:text-[#1e2e24] transition-colors">{g.title}</h4>
-            <p className="text-sm text-[#847f76] mt-1">{g.desc}</p>
+          <div key={idx} className="bg-white/5 p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
+            <h4 className="font-bold text-[#eeeeee] group-hover:text-white transition-colors">{g.title}</h4>
+            <p className="text-sm text-gray-400 mt-1">{g.desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-8 space-y-4 bg-[#f4efe8] p-5 rounded-2xl border border-[#ece8de] interactive-card group">
-        <h3 className="font-bold text-[#5d564d] text-center group-hover:text-black transition-colors">밸런스 게임 랜덤 뽑기</h3>
+      <div className="mt-8 space-y-4 bg-white/5 p-5 rounded-2xl border border-white/10 interactive-card group backdrop-blur-sm">
+        <h3 className="font-bold text-[#ff00ff] text-center group-hover:text-[#ff99ff] transition-colors drop-shadow-[0_0_5px_rgba(255,0,255,0.5)]">밸런스 게임 랜덤 뽑기</h3>
         
-        <div className="bg-white p-6 rounded-xl shadow-sm relative overflow-hidden min-h-[120px] flex items-center justify-center text-center">
+        <div className="bg-[#1a1a1a] border border-[#00ffff]/20 p-6 rounded-xl shadow-[0_0_15px_rgba(0,255,255,0.1)] relative overflow-hidden min-h-[120px] flex items-center justify-center text-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={balanceKey}
@@ -82,12 +82,12 @@ export function GameTab() {
             >
               {currentBalance !== "버튼을 눌러 밸런스 질문을 뽑아보세요!" ? (
                 <div className="flex flex-col gap-3">
-                  <div className="font-bold text-[#2c4033] text-lg">{currentBalance.split(' vs ')[0]}</div>
-                  <div className="text-xs text-[#a39f98] font-bold">VS</div>
-                  <div className="font-bold text-[#8c3a3a] text-lg">{currentBalance.split(' vs ')[1]}</div>
+                  <div className="font-bold text-[#00ffff] text-lg drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]">{currentBalance.split(' vs ')[0]}</div>
+                  <div className="text-xs text-[#ff00ff] font-bold drop-shadow-[0_0_3px_rgba(255,0,255,0.5)]">VS</div>
+                  <div className="font-bold text-[#ff00ff] text-lg drop-shadow-[0_0_5px_rgba(255,0,255,0.5)]">{currentBalance.split(' vs ')[1]}</div>
                 </div>
               ) : (
-                <div className="font-medium text-[#847f76]">{currentBalance}</div>
+                <div className="font-medium text-gray-400">{currentBalance}</div>
               )}
             </motion.div>
           </AnimatePresence>
@@ -95,19 +95,19 @@ export function GameTab() {
 
         <button 
           onClick={drawBalance}
-          className="w-full bg-[#2c4033] text-white font-bold py-3.5 rounded-xl shadow-[0_4px_15px_rgba(44,64,51,0.2)] flex items-center justify-center gap-2 hover:bg-[#1e2e24] transition-colors active:scale-[0.98]"
+          className="w-full bg-[#ff00ff]/10 text-[#ff00ff] border border-[#ff00ff]/30 font-bold py-3.5 rounded-xl shadow-[0_0_15px_rgba(255,0,255,0.2)] flex items-center justify-center gap-2 hover:bg-[#ff00ff]/20 transition-colors active:scale-[0.98]"
         >
-          <Dice5 size={20} />
-          <span>밸런스 질문 뽑기</span>
+          <Dice5 size={20} className="drop-shadow-[0_0_5px_rgba(255,0,255,0.5)]" />
+          <span className="drop-shadow-[0_0_5px_rgba(255,0,255,0.5)]">밸런스 질문 뽑기</span>
         </button>
       </div>
       
       <div className="space-y-4 pt-4">
-        <h3 className="font-bold text-[#5d564d] px-1 border-b border-[#f2f0ea] pb-2">아이스브레이킹 미션 예시</h3>
+        <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] px-1 border-b border-white/10 pb-2">아이스브레이킹 미션 예시</h3>
         <ul className="space-y-3">
           {missions.map((m, idx) => (
-            <li key={idx} className="flex gap-3 text-sm text-[#3e3a35] bg-white p-3 rounded-lg border border-[#f2f0ea] shadow-[0_1px_5px_rgba(0,0,0,0.01)] interactive-card group">
-              <span className="text-[#2c4033] font-bold">{idx + 1}.</span>
+            <li key={idx} className="flex gap-3 text-sm text-gray-300 bg-white/5 p-3 rounded-lg border border-white/10 shadow-[0_1px_5px_rgba(0,0,0,0.3)] interactive-card group backdrop-blur-sm">
+              <span className="text-[#00ffff] font-bold drop-shadow-[0_0_3px_rgba(0,255,255,0.5)]">{idx + 1}.</span>
               <span>{m}</span>
             </li>
           ))}

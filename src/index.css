@@ -42,12 +42,12 @@
 
 @keyframes d-day-glow {
   0%, 100% {
-    box-shadow: 0 4px 20px rgba(196, 164, 90, 0.05);
-    border-color: rgba(196, 164, 90, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
+    border-color: rgba(0, 255, 255, 0.15);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(196, 164, 90, 0.25);
-    border-color: rgba(196, 164, 90, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.25);
+    border-color: rgba(0, 255, 255, 0.4);
   }
 }
 
@@ -57,7 +57,7 @@
   left: 0;
   width: 200%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(196, 164, 90, 0.06), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
   animation: d-day-shimmer 4s infinite linear;
   pointer-events: none;
 }
@@ -98,13 +98,13 @@
   @media (hover: hover) {
     .interactive-card:hover {
       transform: translateY(-4px) scale(1.015);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+      box-shadow: 0 14px 30px rgba(0, 255, 255, 0.1);
     }
   }
 
   .interactive-card:active {
     transform: translateY(-2px) scale(0.99);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 18px rgba(0, 255, 255, 0.05);
   }
 }
 

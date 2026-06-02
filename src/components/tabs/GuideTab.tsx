@@ -42,34 +42,34 @@ export function GuideTab() {
       {/* Location / Contact */}
       <section className="space-y-4">
         <div className="flex items-center gap-2 mb-2">
-          <MapPin className="text-[#2c4033] w-6 h-6" />
-          <h2 className="text-2xl font-bold text-[#2c4033] tracking-tight">오시는 길 / 문의</h2>
+          <MapPin className="text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">오시는 길 / 문의</h2>
         </div>
         
-        <div className="bg-white p-5 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-[#f2f0ea] space-y-5 interactive-card group">
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 space-y-5 interactive-card group backdrop-blur-sm">
           <div>
-            <p className="text-xs text-[#a39f98] font-bold mb-1">주소</p>
-            <p className="text-sm text-[#3e3a35] break-keep">대구광역시 달성군 구지면 구지남로 29 스테이연</p>
+            <p className="text-xs text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">주소</p>
+            <p className="text-sm text-[#eeeeee] break-keep">대구광역시 달성군 구지면 구지남로 29 스테이연</p>
           </div>
           <div>
-            <p className="text-xs text-[#a39f98] font-bold mb-1">전화 문의</p>
-            <p className="text-sm text-[#3e3a35]">010-4527-3377</p>
+            <p className="text-xs text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">전화 문의</p>
+            <p className="text-sm text-[#eeeeee]">010-4527-3377</p>
           </div>
           <div>
-            <p className="text-xs text-[#a39f98] font-bold mb-1">카카오톡 문의</p>
-            <p className="text-sm text-[#3e3a35]">오픈채팅으로 문의하기</p>
+            <p className="text-xs text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">카카오톡 문의</p>
+            <p className="text-sm text-[#eeeeee]">오픈채팅으로 문의하기</p>
           </div>
           <div>
-            <p className="text-xs text-[#a39f98] font-bold mb-1">주차 안내</p>
-            <p className="text-sm text-[#3e3a35]">숙소 앞 또는 지정된 공간에 주차해주세요.</p>
+            <p className="text-xs text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">주차 안내</p>
+            <p className="text-sm text-[#eeeeee]">숙소 앞 또는 지정된 공간에 주차해주세요.</p>
           </div>
 
-          <div className="flex flex-col gap-2 pt-3 border-t border-[#f2f0ea]">
+          <div className="flex flex-col gap-2 pt-3 border-t border-white/10">
             <a 
               href="tel:01045273377" 
-              className="flex items-center justify-center gap-2 p-3.5 rounded-xl bg-white border border-[#ece8de] shadow-sm text-[#3e3a35] hover:bg-[#faf9f5] active:scale-[0.98] transition-all"
+              className="flex items-center justify-center gap-2 p-3.5 rounded-xl bg-white/5 border border-white/20 shadow-sm text-[#eeeeee] hover:bg-white/10 active:scale-[0.98] transition-all"
             >
-              <Phone className="w-5 h-5 text-[#2c4033]" />
+              <Phone className="w-5 h-5 text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]" />
               <span className="font-bold text-sm">전화하기</span>
             </a>
             <a 
@@ -85,9 +85,9 @@ export function GuideTab() {
               href="https://map.naver.com/v5/search/%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8B%AC%EC%84%B1%EA%B5%B0%20%EA%B5%AC%EC%A7%80%EB%A9%B4%20%EA%B5%AC%EC%A7%80%EB%82%A8%EB%A1%9C%2029%20%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%97%B0" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 p-3.5 rounded-xl bg-white border border-[#ece8de] shadow-sm text-[#3e3a35] hover:bg-[#faf9f5] active:scale-[0.98] transition-all"
+              className="flex items-center justify-center gap-2 p-3.5 rounded-xl bg-white/5 border border-white/20 shadow-sm text-[#eeeeee] hover:bg-white/10 active:scale-[0.98] transition-all"
             >
-              <MapIcon className="w-5 h-5 text-[#2c4033]" />
+              <MapIcon className="w-5 h-5 text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]" />
               <span className="font-bold text-sm">길 안내 보기</span>
             </a>
           </div>
@@ -97,15 +97,15 @@ export function GuideTab() {
       {/* Party Rules */}
       <section className="space-y-4">
         <div className="flex items-center gap-2 mb-2">
-          <AlertCircle className="text-[#8c3a3a] w-6 h-6" />
-          <h2 className="text-2xl font-bold text-[#2c4033] tracking-tight">파티 안내사항</h2>
+          <AlertCircle className="text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">파티 안내사항</h2>
         </div>
         
-        <div className="bg-white p-5 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-[#f2f0ea] interactive-card group">
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
           <ul className="space-y-3">
             {rules.map((rule, idx) => (
-              <li key={idx} className="flex gap-3 text-sm text-[#3e3a35] leading-relaxed">
-                <span className="text-[#a39f98] font-bold shrink-0 mt-0.5">•</span>
+              <li key={idx} className="flex gap-3 text-sm text-gray-300 leading-relaxed">
+                <span className="text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold shrink-0 mt-0.5">•</span>
                 <span>{rule}</span>
               </li>
             ))}
@@ -116,14 +116,14 @@ export function GuideTab() {
       {/* Pension Guide */}
       <section className="space-y-4">
         <div className="flex items-center gap-2 mb-2">
-          <h2 className="text-2xl font-bold text-[#2c4033] tracking-tight">스테이연 안내</h2>
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">스테이연 안내</h2>
         </div>
         
-        <div className="bg-[#f4efe8] p-5 rounded-2xl border border-[#ece8de] interactive-card group">
+        <div className="bg-white/5 p-5 rounded-2xl border border-white/10 interactive-card group backdrop-blur-sm">
           <ul className="space-y-3">
             {pensionRules.map((rule, idx) => (
-              <li key={idx} className="flex gap-3 text-sm text-[#5d564d] leading-relaxed">
-                <span className="text-[#847f76] shrink-0 mt-0.5">-</span>
+              <li key={idx} className="flex gap-3 text-sm text-gray-300 leading-relaxed">
+                <span className="text-[#00ffff] drop-shadow-[0_0_3px_rgba(0,255,255,0.5)] shrink-0 mt-0.5">-</span>
                 <span>{rule}</span>
               </li>
             ))}
@@ -132,9 +132,9 @@ export function GuideTab() {
       </section>
 
       {/* Checklist */}
-      <section className="space-y-4 pt-4 border-t border-[#f2f0ea]">
-        <h3 className="font-bold text-[#3e3a35] px-1">숙소 이용 체크리스트</h3>
-        <p className="text-xs text-[#847f76] px-1 mb-2">퇴실 시 아래 항목들을 확인해주세요.</p>
+      <section className="space-y-4 pt-4 border-t border-white/10">
+        <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] px-1">숙소 이용 체크리스트</h3>
+        <p className="text-xs text-gray-400 px-1 mb-2">퇴실 시 아래 항목들을 확인해주세요.</p>
         
         <div className="space-y-2">
           {[
@@ -147,19 +147,19 @@ export function GuideTab() {
             <div 
               key={item.id}
               onClick={() => toggleCheck(item.id as keyof typeof checklist)}
-              className={`flex items-center gap-3 p-4 rounded-xl cursor-pointer transition-colors border interactive-card group ${
+              className={`flex items-center gap-3 p-4 rounded-xl cursor-pointer transition-colors border interactive-card group backdrop-blur-sm ${
                 checklist[item.id as keyof typeof checklist] 
-                  ? 'bg-[#2c4033]/5 border-[#2c4033]/20' 
-                  : 'bg-white border-[#f2f0ea] hover:bg-[#faf9f5]'
+                  ? 'bg-[#00ffff]/10 border-[#00ffff]/30' 
+                  : 'bg-white/5 border-white/10 hover:bg-white/10'
               }`}
             >
               <CheckCircle2 
                 className={`w-6 h-6 transition-colors ${
-                  checklist[item.id as keyof typeof checklist] ? 'text-[#2c4033]' : 'text-[#d5d0c5]'
+                  checklist[item.id as keyof typeof checklist] ? 'text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]' : 'text-gray-600'
                 }`} 
               />
               <span className={`font-medium transition-colors ${
-                checklist[item.id as keyof typeof checklist] ? 'text-[#2c4033] line-through opacity-70' : 'text-[#3e3a35]'
+                checklist[item.id as keyof typeof checklist] ? 'text-[#00ffff] drop-shadow-[0_0_3px_rgba(0,255,255,0.5)] line-through opacity-70' : 'text-gray-300'
               }`}>
                 {item.label}
               </span>
