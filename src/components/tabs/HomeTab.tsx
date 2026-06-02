@@ -71,15 +71,19 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
       {/* Party Pass Card */}
       <section className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#ff00ff]/30 space-y-3 interactive-card group backdrop-blur-sm relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff]/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-        <div className="flex justify-between items-center border-b border-white/10 pb-3 relative z-10">
-          <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] flex items-center gap-2">
+        <div className="flex justify-between items-start border-b border-white/10 pb-4 relative z-10">
+          <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] flex items-center gap-2 mt-1">
             <Ticket className="w-5 h-5" /> PARTY PASS
           </h3>
-          <span className="font-black text-white tracking-widest text-lg drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">1인 100,000원</span>
+          <div className="text-right flex flex-col items-end">
+             <span className="text-gray-400 text-xs line-through tracking-wider mb-0.5">정상가 189,000원</span>
+             <span className="font-black text-white tracking-widest text-[22px] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] leading-none mb-2">100,000<span className="text-sm font-bold opacity-80 ml-0.5">원</span></span>
+             <span className="inline-block px-2.5 py-1 rounded text-[10px] font-bold bg-[#00ffff]/10 text-[#00ffff] border border-[#00ffff]/30 drop-shadow-[0_0_5px_rgba(0,255,255,0.4)]">첫 파티 한정 초대가</span>
+          </div>
         </div>
         <div className="pt-1 relative z-10">
           <p className="text-sm text-gray-300 font-medium leading-relaxed break-keep">
-            숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 파티 프로그램
+            숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 불꽃놀이 · 파티 프로그램 포함
           </p>
         </div>
       </section>

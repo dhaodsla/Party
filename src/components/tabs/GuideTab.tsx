@@ -49,9 +49,13 @@ export function GuideTab() {
         <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#ff00ff]/30 space-y-5 interactive-card group backdrop-blur-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff]/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
           
-          <div className="flex justify-between items-center border-b border-white/10 pb-4 relative z-10">
-            <p className="text-sm text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">참가비</p>
-            <p className="font-black text-white tracking-widest text-2xl drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">1인 100,000원</p>
+          <div className="flex justify-between items-start border-b border-white/10 pb-5 relative z-10">
+            <p className="text-sm text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1 mt-1.5">참가비</p>
+            <div className="text-right flex flex-col items-end">
+               <span className="text-gray-400 text-xs line-through tracking-wider mb-1">정상가 189,000원</span>
+               <span className="font-black text-white tracking-widest text-[26px] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] leading-none mb-2.5">100,000<span className="text-lg font-bold opacity-80 ml-0.5">원</span></span>
+               <span className="inline-block px-2.5 py-1 rounded text-[11px] font-bold bg-[#00ffff]/10 text-[#00ffff] border border-[#00ffff]/30 drop-shadow-[0_0_5px_rgba(0,255,255,0.4)]">첫 파티 한정 초대가</span>
+            </div>
           </div>
 
           <div className="relative z-10">
@@ -65,6 +69,7 @@ export function GuideTab() {
                 "수영장 이용 가능",
                 "자쿠지 이용 가능",
                 "타월 제공",
+                "불꽃놀이",
                 "파티 프로그램",
                 "자기소개 타임",
                 "아이스브레이킹 게임",
