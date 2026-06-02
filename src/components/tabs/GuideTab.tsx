@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AlertCircle, CheckCircle2, Phone, MessageCircle, Map as MapIcon, MapPin } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Phone, MessageCircle, Map as MapIcon, MapPin, Ticket, Wallet, Sparkles, Droplets, ShoppingBag, Info, Check } from 'lucide-react';
 
 const rules = [
   "입실은 17:00부터 가능합니다.",
@@ -39,6 +39,83 @@ export function GuideTab() {
   return (
     <div className="p-6 max-w-md mx-auto space-y-10 animate-in fade-in pb-12">
       
+      {/* Party Pass & Details */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Ticket className="text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">참가비 / 제공내역</h2>
+        </div>
+        
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#ff00ff]/30 space-y-5 interactive-card group backdrop-blur-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff]/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+          
+          <div className="flex justify-between items-center border-b border-white/10 pb-4 relative z-10">
+            <p className="text-sm text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-1">참가비</p>
+            <p className="font-black text-white tracking-widest text-2xl drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">1인 100,000원</p>
+          </div>
+
+          <div className="relative z-10">
+            <p className="text-sm text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold mb-3 flex items-center gap-1.5"><Sparkles className="w-4 h-4" /> 제공내역</p>
+            <ul className="grid grid-cols-1 gap-2.5 ml-1">
+              {[
+                "스테이연 A동 · B동 전체 대관",
+                "1박 숙박",
+                "바비큐",
+                "음식 제공",
+                "수영장 이용 가능",
+                "자쿠지 이용 가능",
+                "타월 제공",
+                "파티 프로그램",
+                "자기소개 타임",
+                "아이스브레이킹 게임",
+                "음악 · 토크 · 자유 파티"
+              ].map((item, idx) => (
+                <li key={idx} className="flex gap-2.5 text-sm text-[#eeeeee] items-start">
+                  <Check className="w-4 h-4 text-[#00ffff] drop-shadow-[0_0_3px_rgba(0,255,255,0.5)] mt-0.5 shrink-0" />
+                  <span className="leading-tight">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl text-xs text-gray-300 mt-4 leading-relaxed break-keep relative z-10 flex gap-3 items-start">
+             <Droplets className="w-5 h-5 text-[#00ffff] drop-shadow-[0_0_3px_rgba(0,255,255,0.5)] shrink-0 mt-0.5" />
+             <div className="space-y-1.5">
+               <p><strong className="text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]">수영/자쿠지 안내</strong></p>
+               <p>수영을 원하시는 분은 수영복과 여벌 옷만 준비해주세요. 타월은 제공됩니다.</p>
+               <p>자쿠지는 현장 상황에 따라 순서대로 이용하실 수 있습니다.</p>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Preparation Items */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2 mb-2">
+          <ShoppingBag className="text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">준비물</h2>
+        </div>
+        
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
+          <div className="flex flex-wrap gap-2.5">
+            {[
+              "개인 세면도구",
+              "편한 옷",
+              "여벌 옷",
+              "수영복",
+              "충전기",
+              "개인 상비약",
+              "좋은 컨디션"
+            ].map((item, idx) => (
+              <span key={idx} className="px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-[#eeeeee] flex items-center gap-2 group-hover:bg-white/10 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)]" />
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Location / Contact */}
       <section className="space-y-4">
         <div className="flex items-center gap-2 mb-2">

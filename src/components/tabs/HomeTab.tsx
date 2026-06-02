@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, Users, ChevronRight } from 'lucide-react';
+import { Calendar, MapPin, Clock, Users, ChevronRight, Ticket } from 'lucide-react';
 
 interface HomeTabProps {
   onNavigate: (tab: 'home' | 'schedule' | 'intro' | 'game' | 'guide') => void;
@@ -65,6 +65,22 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
             <p className="font-semibold text-[#eeeeee] group-hover:text-white transition-colors">스테이연</p>
             <p className="text-sm text-gray-400">A동 · B동 전체 대관</p>
           </div>
+        </div>
+      </section>
+
+      {/* Party Pass Card */}
+      <section className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#ff00ff]/30 space-y-3 interactive-card group backdrop-blur-sm relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff]/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+        <div className="flex justify-between items-center border-b border-white/10 pb-3 relative z-10">
+          <h3 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] flex items-center gap-2">
+            <Ticket className="w-5 h-5" /> PARTY PASS
+          </h3>
+          <span className="font-black text-white tracking-widest text-lg drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">1인 100,000원</span>
+        </div>
+        <div className="pt-1 relative z-10">
+          <p className="text-sm text-gray-300 font-medium leading-relaxed break-keep">
+            숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 파티 프로그램
+          </p>
         </div>
       </section>
 
