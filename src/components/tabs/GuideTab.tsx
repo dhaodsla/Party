@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AlertCircle, CheckCircle2, Phone, MessageCircle, Map as MapIcon, MapPin, Ticket, Wallet, Sparkles, Droplets, ShoppingBag, Info, Check } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Phone, MessageCircle, Map as MapIcon, MapPin, Ticket, Wallet, Sparkles, Droplets, ShoppingBag, Info, Check, Users } from 'lucide-react';
 
 const rules = [
   "입실은 17:00부터 가능합니다.",
@@ -24,6 +24,11 @@ const pensionRules = [
 ];
 
 export function GuideTab() {
+  const currentParticipants = 2;
+  const totalParticipants = 15;
+  const remainingSeats = totalParticipants - currentParticipants;
+  const progressPercentage = (currentParticipants / totalParticipants) * 100;
+
   const [checklist, setChecklist] = useState({
     item1: false,
     item2: false,
@@ -39,6 +44,39 @@ export function GuideTab() {
   return (
     <div className="p-6 max-w-md mx-auto space-y-10 animate-in fade-in pb-12">
       
+      {/* Invitation Status Summary */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Users className="text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">참여 현황</h2>
+        </div>
+        
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-center flex-1">
+              <p className="text-xs text-gray-400 mb-1">총 모집</p>
+              <p className="text-lg font-bold text-[#eeeeee]">{totalParticipants}명</p>
+            </div>
+            <div className="w-px h-10 bg-white/10"></div>
+            <div className="text-center flex-1">
+              <p className="text-xs text-gray-400 mb-1">현재 참여</p>
+              <p className="text-lg font-bold text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]">{currentParticipants}명</p>
+            </div>
+            <div className="w-px h-10 bg-white/10"></div>
+            <div className="text-center flex-1">
+              <p className="text-xs text-gray-400 mb-1">남은 자리</p>
+              <p className="text-lg font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)]">{remainingSeats}명</p>
+            </div>
+          </div>
+          <div className="w-full h-2 bg-black/50 rounded-full overflow-hidden border border-white/10">
+            <div 
+              className="h-full bg-gradient-to-r from-[#00ffff] to-[#ff00ff] rounded-full shadow-[0_0_10px_rgba(0,255,255,0.5)]" 
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
+          </div>
+        </div>
+      </section>
+
       {/* Party Pass & Details */}
       <section className="space-y-4">
         <div className="flex items-center gap-2 mb-2">

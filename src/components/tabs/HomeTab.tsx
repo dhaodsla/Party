@@ -6,6 +6,11 @@ interface HomeTabProps {
 }
 
 export function HomeTab({ onNavigate }: HomeTabProps) {
+  const currentParticipants = 2;
+  const totalParticipants = 15;
+  const remainingSeats = totalParticipants - currentParticipants;
+  const progressPercentage = (currentParticipants / totalParticipants) * 100;
+
   const getDDay = () => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -46,6 +51,31 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         <div className="text-sm text-gray-300 font-medium leading-relaxed relative z-10">
           <span className="font-bold text-white">2026.06.26 FRI</span><br/>
           <span className="text-gray-400 text-xs tracking-wider mt-1 inline-block">UNTIL THE NIGHT BEGINS</span>
+        </div>
+      </section>
+
+      {/* Invitation Status Card */}
+      <section className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#00ffff]/30 space-y-4 interactive-card group backdrop-blur-sm relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ffff]/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+        <div className="relative z-10">
+          <p className="text-[11px] font-bold text-[#00ffff] mb-2 tracking-[0.2em] group-hover:text-[#66ffff] transition-colors drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]">
+            INVITATION STATUS
+          </p>
+          <div className="flex items-end justify-between mb-2">
+            <div className="text-3xl font-black text-white tracking-tighter drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+              {currentParticipants} <span className="text-xl text-gray-400 font-bold">/ {totalParticipants}</span> <span className="text-lg text-gray-300 font-bold ml-1">참여 확정</span>
+            </div>
+            <div className="text-sm font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] mb-1">
+              남은 자리 {remainingSeats}명
+            </div>
+          </div>
+          <div className="w-full h-2.5 bg-black/50 rounded-full overflow-hidden border border-white/10 mb-3">
+            <div 
+              className="h-full bg-gradient-to-r from-[#00ffff] to-[#ff00ff] rounded-full shadow-[0_0_10px_rgba(0,255,255,0.5)]" 
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
+          </div>
+          <p className="text-xs text-gray-400 font-medium">첫 파티 한정 초대가 진행중</p>
         </div>
       </section>
 
