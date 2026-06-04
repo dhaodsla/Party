@@ -3,11 +3,10 @@ import { Home, Calendar, Users, Gamepad2, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { HomeTab } from './tabs/HomeTab';
 import { ScheduleTab } from './tabs/ScheduleTab';
-import { IntroTab } from './tabs/IntroTab';
 import { GameTab } from './tabs/GameTab';
 import { GuideTab } from './tabs/GuideTab';
 
-type Tab = 'home' | 'schedule' | 'intro' | 'game' | 'guide';
+type Tab = 'home' | 'schedule' | 'game' | 'guide';
 
 export function MainApp() {
   const [activeTab, setActiveTab] = useState<Tab>('home');
@@ -16,7 +15,6 @@ export function MainApp() {
     switch (activeTab) {
       case 'home': return <HomeTab onNavigate={setActiveTab} />;
       case 'schedule': return <ScheduleTab />;
-      case 'intro': return <IntroTab />;
       case 'game': return <GameTab />;
       case 'guide': return <GuideTab />;
       default: return <HomeTab onNavigate={setActiveTab} />;
@@ -26,7 +24,6 @@ export function MainApp() {
   const navItems = [
     { id: 'home', label: '홈', icon: Home },
     { id: 'schedule', label: '일정', icon: Calendar },
-    { id: 'intro', label: '소개', icon: Users },
     { id: 'game', label: '게임', icon: Gamepad2 },
     { id: 'guide', label: '안내', icon: Info },
   ] as const;

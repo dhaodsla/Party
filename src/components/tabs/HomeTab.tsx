@@ -2,7 +2,7 @@ import React from 'react';
 import { Calendar, MapPin, Clock, Users, ChevronRight, Ticket } from 'lucide-react';
 
 interface HomeTabProps {
-  onNavigate: (tab: 'home' | 'schedule' | 'intro' | 'game' | 'guide') => void;
+  onNavigate: (tab: 'home' | 'schedule' | 'game' | 'guide') => void;
 }
 
 export function HomeTab({ onNavigate }: HomeTabProps) {
@@ -152,10 +152,6 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
       <section className="space-y-3">
         <button onClick={() => onNavigate('schedule')} className="w-full bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center hover:bg-white/10 transition-colors interactive-card group backdrop-blur-sm">
           <span className="font-medium text-[#eeeeee] group-hover:text-white transition-colors">오늘의 일정 보기</span>
-          <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-[#00ffff] group-hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.6)] group-hover:translate-x-0.5 transition-all transform-gpu" />
-        </button>
-        <button onClick={() => onNavigate('intro')} className="w-full bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center hover:bg-white/10 transition-colors interactive-card group backdrop-blur-sm">
-          <span className="font-medium text-[#eeeeee] group-hover:text-white transition-colors">자기소개 가이드</span>
           <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-[#00ffff] group-hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.6)] group-hover:translate-x-0.5 transition-all transform-gpu" />
         </button>
         <button onClick={() => onNavigate('guide')} className="w-full bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center hover:bg-white/10 transition-colors interactive-card group backdrop-blur-sm">
