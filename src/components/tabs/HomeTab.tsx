@@ -83,7 +83,7 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
         </div>
         <div className="pt-1 relative z-10">
           <p className="text-sm text-gray-300 font-medium leading-relaxed break-keep">
-            숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 불꽃놀이 · 파티 프로그램 포함
+            숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 물총 제공 · 워터게임 · 파티 프로그램 포함
           </p>
         </div>
       </section>

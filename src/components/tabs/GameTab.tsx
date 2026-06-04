@@ -21,6 +21,7 @@ const balanceQuestions = [
 ];
 
 const games = [
+  { title: "WATER GUN BATTLE", desc: "물총싸움 & 워터게임\n수영장 주변에서 팀별로 가볍게 즐기는 물총싸움 프로그램입니다.\n물총은 스테이연에서 준비합니다.\n무리한 신체 접촉 없이 안전하게 진행합니다." },
   { title: "랜덤 질문 게임", desc: "질문을 뽑고 한 명씩 가볍게 답하면서 분위기를 푸는 게임" },
   { title: "밸런스 게임", desc: "둘 중 하나를 선택하면서 서로의 성향을 알아보는 게임" },
   { title: "팀별 노래 맞히기", desc: "노래 전주나 가사 힌트를 듣고 가수와 제목을 맞히는 게임" },
@@ -60,9 +61,9 @@ export function GameTab() {
 
       <div className="grid grid-cols-1 gap-3">
         {games.map((g, idx) => (
-          <div key={idx} className="bg-white/5 p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
-            <h4 className="font-bold text-[#eeeeee] group-hover:text-white transition-colors">{g.title}</h4>
-            <p className="text-sm text-gray-400 mt-1">{g.desc}</p>
+          <div key={idx} className={`bg-white/5 p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border interactive-card group backdrop-blur-sm ${g.title === 'WATER GUN BATTLE' ? 'border-[#00ffff]/40 shadow-[0_0_15px_rgba(0,255,255,0.1)]' : 'border-white/10'}`}>
+            <h4 className={`font-bold transition-colors ${g.title === 'WATER GUN BATTLE' ? 'text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.4)]' : 'text-[#eeeeee] group-hover:text-white'}`}>{g.title}</h4>
+            <p className="text-sm text-gray-400 mt-1 whitespace-pre-wrap">{g.desc}</p>
           </div>
         ))}
       </div>

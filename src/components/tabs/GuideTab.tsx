@@ -69,6 +69,8 @@ export function GuideTab() {
                 "수영장 이용 가능",
                 "자쿠지 이용 가능",
                 "타월 제공",
+                "물총 제공",
+                "물총싸움 & 워터게임",
                 "불꽃놀이",
                 "파티 프로그램",
                 "자기소개 타임",
@@ -86,9 +88,10 @@ export function GuideTab() {
           <div className="bg-white/5 border border-white/10 p-4 rounded-xl text-xs text-gray-300 mt-4 leading-relaxed break-keep relative z-10 flex gap-3 items-start">
              <Droplets className="w-5 h-5 text-[#00ffff] drop-shadow-[0_0_3px_rgba(0,255,255,0.5)] shrink-0 mt-0.5" />
              <div className="space-y-1.5">
-               <p><strong className="text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]">수영/자쿠지 안내</strong></p>
-               <p>수영을 원하시는 분은 수영복과 여벌 옷만 준비해주세요. 타월은 제공됩니다.</p>
-               <p>자쿠지는 현장 상황에 따라 순서대로 이용하실 수 있습니다.</p>
+               <p><strong className="text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]">수영/워터게임 안내</strong></p>
+               <p>워터타임 참여를 원하시는 분은 수영복 또는 젖어도 괜찮은 옷을 준비해주세요.</p>
+               <p>물총과 타월은 스테이연에서 제공합니다.</p>
+               <p>안전을 위해 수영장 주변에서는 뛰지 말아주세요.</p>
              </div>
           </div>
         </div>
@@ -173,6 +176,35 @@ export function GuideTab() {
               <span className="font-bold text-sm">길 안내 보기</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Attendance & Accommodation Rules */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Info className="text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.5)] w-6 h-6" />
+          <h2 className="text-2xl font-bold text-[#00ffff] tracking-tight drop-shadow-[0_0_8px_rgba(0,255,255,0.4)]">참석 및 숙박 안내</h2>
+        </div>
+        
+        <div className="bg-white/5 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-white/10 interactive-card group backdrop-blur-sm">
+          <ul className="space-y-3">
+            <li className="flex gap-3 text-sm text-gray-300 leading-relaxed items-start">
+              <span className="text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold shrink-0 mt-0.5">•</span>
+              <span>커플도 함께 참석 가능합니다.</span>
+            </li>
+            <li className="flex gap-3 text-sm text-gray-300 leading-relaxed items-start">
+              <span className="text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold shrink-0 mt-0.5">•</span>
+              <span>모든 참가자의 편안한 이용을 위해 숙박 공간은 남녀 구분 배정으로 운영됩니다.</span>
+            </li>
+            <li className="flex gap-3 text-sm text-white font-medium leading-relaxed bg-[#ff00ff]/10 border border-[#ff00ff]/30 p-3 rounded-xl items-start">
+              <span className="text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold shrink-0 mt-0.5">•</span>
+              <span className="drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]">남녀 혼숙은 불가합니다.</span>
+            </li>
+            <li className="flex gap-3 text-sm text-gray-300 leading-relaxed items-start">
+              <span className="text-[#ff00ff] drop-shadow-[0_0_3px_rgba(255,0,255,0.5)] font-bold shrink-0 mt-0.5">•</span>
+              <span>개인 짐은 지정된 숙박 공간에 보관해주세요.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
