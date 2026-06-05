@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, Users, ChevronRight, Ticket } from 'lucide-react';
+import { Calendar, MapPin, Clock, Users, ChevronRight, Ticket, Sparkles } from 'lucide-react';
 
 interface HomeTabProps {
   onNavigate: (tab: 'home' | 'schedule' | 'game' | 'guide') => void;
@@ -115,6 +115,46 @@ export function HomeTab({ onNavigate }: HomeTabProps) {
           <p className="text-sm text-gray-300 font-medium leading-relaxed break-keep">
             숙박 · 바비큐 · 음식 · 수영장 · 자쿠지 · 물총 제공 · 워터게임 · 파티 프로그램 포함
           </p>
+        </div>
+      </section>
+
+      {/* Party Highlights */}
+      <section className="space-y-3">
+        <div className="mb-3">
+          <div className="flex items-center gap-2 mb-1">
+            <Sparkles className="w-5 h-5 text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]" />
+            <h3 className="font-bold text-[#eeeeee]">PARTY HIGHLIGHTS</h3>
+          </div>
+          <p className="text-xs text-gray-400">이 파티에서 즐길 수 있는 메인 프로그램</p>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-3">
+          <button onClick={() => onNavigate('game')} className="text-left w-full bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00ffff]/30 transition-all interactive-card group backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#00ffff]/5 rounded-full blur-2xl -mr-12 -mt-12 group-hover:bg-[#00ffff]/10 transition-colors pointer-events-none"></div>
+            <div className="relative z-10">
+              <h4 className="font-bold text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.4)] text-lg mb-0.5 tracking-tight">WATER GUN BATTLE</h4>
+              <p className="text-sm text-gray-300 font-bold mb-2">물총싸움 & 워터게임</p>
+              <p className="text-xs text-gray-400 font-medium leading-relaxed break-keep">수영장 주변에서 팀별로 가볍게 즐기는 워터 프로그램입니다.<br/>물총은 스테이연에서 준비합니다.</p>
+            </div>
+          </button>
+          
+          <button onClick={() => onNavigate('guide')} className="text-left w-full bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00ffff]/30 transition-all interactive-card group backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#00ffff]/5 rounded-full blur-2xl -mr-12 -mt-12 group-hover:bg-[#00ffff]/10 transition-colors pointer-events-none"></div>
+            <div className="relative z-10">
+              <h4 className="font-bold text-[#00ffff] drop-shadow-[0_0_5px_rgba(0,255,255,0.4)] text-lg mb-0.5 tracking-tight">POOL & JACUZZI</h4>
+              <p className="text-sm text-gray-300 font-bold mb-2">수영장 & 자쿠지</p>
+              <p className="text-xs text-gray-400 font-medium leading-relaxed break-keep">자유롭게 즐길 수 있는 스테이연의 특별한 공간입니다.<br/>수영을 원하시는 분은 수영복과 여벌 옷만 준비해주세요.</p>
+            </div>
+          </button>
+          
+          <button onClick={() => onNavigate('schedule')} className="text-left w-full bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#ff00ff]/30 transition-all interactive-card group backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#ff00ff]/5 rounded-full blur-2xl -mr-12 -mt-12 group-hover:bg-[#ff00ff]/10 transition-colors pointer-events-none"></div>
+            <div className="relative z-10">
+              <h4 className="font-bold text-[#ff00ff] drop-shadow-[0_0_5px_rgba(255,0,255,0.4)] text-lg mb-0.5 tracking-tight">BBQ & PARTY NIGHT</h4>
+              <p className="text-sm text-gray-300 font-bold mb-2">바비큐 & 자유 파티</p>
+              <p className="text-xs text-gray-400 font-medium leading-relaxed break-keep">맛있는 음식, 음악, 대화와 함께<br/>자연스럽게 어울리는 메인 파티 시간입니다.</p>
+            </div>
+          </button>
         </div>
       </section>
 
